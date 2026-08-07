@@ -1,0 +1,33 @@
+{
+  "note": "方案15(NN主导) 与 方案16(KF主导) 自动调参结果，由 compare_s16.py 生成",
+  "data_segments": 6,
+  "data_samples": 11690,
+  "global_kf_ema": {
+    "ms_q": 0.31814431861399683,
+    "ms_r": 9.531990248962321,
+    "bmp_q": 0.0524646448136289,
+    "bmp_r": 0.4502490312616464,
+    "pressure_ema_alpha": 0.24680234580263521,
+    "height_ema_alpha": 0.7105947624754628
+  },
+  "scheme15_fusion": {
+    "gate_open": 0.7026611792000437,
+    "gate_close": 0.5522255178040967,
+    "lock_integ": 0.799439507765171,
+    "hold_anchor": 0.00034252335773095056,
+    "delta_lp_alpha": 0.2609699592345512,
+    "motion_lp_alpha": 0.18075831909850626,
+    "delta_conf_eps": 0.9913096311761747
+  },
+  "scheme16_fusion": {
+    "gate_open_kf": 0.01177476553513446,
+    "gate_close_kf": 0.01507009220616791,
+    "scene16_lp_alpha": 0.309618960667385,
+    "scene16_delta_alpha": 0.11976540897034706,
+    "lock_integ": 1.1909000793634268,
+    "hold_anchor": 0.01981512604928485,
+    "delta_lp_alpha": 0.14970353110193244,
+    "motion_lp_alpha": 0.5521808216466741,
+    "delta_conf_eps": 0.7960668903208974
+  }
+}

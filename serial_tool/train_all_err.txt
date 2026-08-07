@@ -1,0 +1,258 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238060.611339   36588 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238062.133706   36588 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+I0000 00:00:1783238062.651774   36588 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+W0000 00:00:1783238067.926172   36588 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238067.927588   36588 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238067.929174   36588 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpd1310voz
+I0000 00:00:1783238067.931127   36588 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238067.932698   36588 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpd1310voz
+I0000 00:00:1783238067.938742   36588 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1783238067.940862   36588 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238067.974771   36588 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpd1310voz
+I0000 00:00:1783238067.987794   36588 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 58637 microseconds.
+I0000 00:00:1783238068.001942   36588 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+W0000 00:00:1783238073.970401   36588 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238073.971699   36588 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238073.972972   36588 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpmp3cx2jp
+I0000 00:00:1783238073.974980   36588 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238073.976526   36588 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpmp3cx2jp
+I0000 00:00:1783238073.983573   36588 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238074.016672   36588 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpmp3cx2jp
+I0000 00:00:1783238074.028156   36588 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 55194 microseconds.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+W0000 00:00:1783238078.773540   36588 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238078.774318   36588 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238078.774877   36588 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpor5fi533
+I0000 00:00:1783238078.775925   36588 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238078.776245   36588 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpor5fi533
+I0000 00:00:1783238078.782842   36588 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238078.809778   36588 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpor5fi533
+I0000 00:00:1783238078.820161   36588 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 45293 microseconds.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238082.232752   23448 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238083.769832   23448 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+I0000 00:00:1783238084.338095   23448 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+W0000 00:00:1783238091.911990   23448 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238091.913614   23448 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238091.915190   23448 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmp5ul7zhsm
+I0000 00:00:1783238091.916853   23448 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238091.917838   23448 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmp5ul7zhsm
+I0000 00:00:1783238091.923913   23448 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1783238091.925531   23448 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238091.955563   23448 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmp5ul7zhsm
+I0000 00:00:1783238091.965009   23448 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 49837 microseconds.
+I0000 00:00:1783238091.979838   23448 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238095.468059   43772 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238096.821495   43772 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+I0000 00:00:1783238097.261221   43772 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+W0000 00:00:1783238105.341216   43772 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238105.342717   43772 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238105.344405   43772 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmp6btzb7jc
+I0000 00:00:1783238105.346143   43772 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238105.347296   43772 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmp6btzb7jc
+I0000 00:00:1783238105.351923   43772 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1783238105.353476   43772 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238105.377629   43772 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmp6btzb7jc
+I0000 00:00:1783238105.385151   43772 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 40765 microseconds.
+I0000 00:00:1783238105.396737   43772 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238108.835752   45768 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238110.486098   45768 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1783238111.075212   45768 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+W0000 00:00:1783238125.392023   45768 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238125.393531   45768 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238125.395158   45768 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmp9lw7qkf6
+I0000 00:00:1783238125.397690   45768 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238125.399194   45768 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmp9lw7qkf6
+I0000 00:00:1783238125.408007   45768 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1783238125.410022   45768 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238125.443471   45768 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmp9lw7qkf6
+I0000 00:00:1783238125.456270   45768 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 61132 microseconds.
+I0000 00:00:1783238125.473024   45768 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+W0000 00:00:1783238125.530709   45768 flatbuffer_export.cc:4237] TFLite interpreter needs to link Flex delegate in order to run the model since it contains the following Select TFop(s):
+Flex ops: FlexTensorListReserve, FlexTensorListSetItem, FlexTensorListStack
+Details:
+	tf.TensorListReserve(tensor<2xi32>, tensor<i32>) -> (tensor<!tf_type.variant<tensor<?x16xf32>>>) : {device = ""}
+	tf.TensorListReserve(tensor<2xi32>, tensor<i32>) -> (tensor<!tf_type.variant<tensor<?x32xf32>>>) : {device = ""}
+	tf.TensorListSetItem(tensor<!tf_type.variant<tensor<?x16xf32>>>, tensor<i32>, tensor<?x16xf32>) -> (tensor<!tf_type.variant<tensor<?x16xf32>>>) : {device = "", resize_if_index_out_of_bounds = false}
+	tf.TensorListSetItem(tensor<!tf_type.variant<tensor<?x32xf32>>>, tensor<i32>, tensor<?x32xf32>) -> (tensor<!tf_type.variant<tensor<?x32xf32>>>) : {device = "", resize_if_index_out_of_bounds = false}
+	tf.TensorListStack(tensor<!tf_type.variant<tensor<?x16xf32>>>, tensor<2xi32>) -> (tensor<1x?x16xf32>) : {device = "", num_elements = 1 : i64}
+	tf.TensorListStack(tensor<!tf_type.variant<tensor<?x32xf32>>>, tensor<2xi32>) -> (tensor<10x?x32xf32>) : {device = "", num_elements = 10 : i64}
+See instructions: https://www.tensorflow.org/lite/guide/ops_select
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238128.546860   36336 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238129.732318   36336 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1783238130.144409   36336 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\rnn\rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+W0000 00:00:1783238144.674963   36336 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238144.675787   36336 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238144.676400   36336 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmptna25p9j
+I0000 00:00:1783238144.678035   36336 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238144.678800   36336 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmptna25p9j
+I0000 00:00:1783238144.686557   36336 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1783238144.688123   36336 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238144.716629   36336 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmptna25p9j
+I0000 00:00:1783238144.731724   36336 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 55341 microseconds.
+I0000 00:00:1783238144.750001   36336 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+W0000 00:00:1783238144.816121   36336 flatbuffer_export.cc:4237] TFLite interpreter needs to link Flex delegate in order to run the model since it contains the following Select TFop(s):
+Flex ops: FlexTensorListReserve, FlexTensorListSetItem, FlexTensorListStack
+Details:
+	tf.TensorListReserve(tensor<2xi32>, tensor<i32>) -> (tensor<!tf_type.variant<tensor<?x16xf32>>>) : {device = ""}
+	tf.TensorListReserve(tensor<2xi32>, tensor<i32>) -> (tensor<!tf_type.variant<tensor<?x32xf32>>>) : {device = ""}
+	tf.TensorListSetItem(tensor<!tf_type.variant<tensor<?x16xf32>>>, tensor<i32>, tensor<?x16xf32>) -> (tensor<!tf_type.variant<tensor<?x16xf32>>>) : {device = "", resize_if_index_out_of_bounds = false}
+	tf.TensorListSetItem(tensor<!tf_type.variant<tensor<?x32xf32>>>, tensor<i32>, tensor<?x32xf32>) -> (tensor<!tf_type.variant<tensor<?x32xf32>>>) : {device = "", resize_if_index_out_of_bounds = false}
+	tf.TensorListStack(tensor<!tf_type.variant<tensor<?x16xf32>>>, tensor<2xi32>) -> (tensor<1x?x16xf32>) : {device = "", num_elements = 1 : i64}
+	tf.TensorListStack(tensor<!tf_type.variant<tensor<?x32xf32>>>, tensor<2xi32>) -> (tensor<10x?x32xf32>) : {device = "", num_elements = 10 : i64}
+See instructions: https://www.tensorflow.org/lite/guide/ops_select
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238147.938525   45052 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238149.150787   45052 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+I0000 00:00:1783238149.575397   45052 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+W0000 00:00:1783238156.989609   45052 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238156.989946   45052 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238156.990581   45052 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpo5n2wrs2
+I0000 00:00:1783238156.991368   45052 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238156.991682   45052 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpo5n2wrs2
+I0000 00:00:1783238156.994833   45052 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1783238156.996077   45052 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238157.016443   45052 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpo5n2wrs2
+I0000 00:00:1783238157.023294   45052 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 32728 microseconds.
+I0000 00:00:1783238157.032128   45052 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238160.008329   45596 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238161.299232   45596 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+I0000 00:00:1783238161.730720   45596 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+W0000 00:00:1783238167.425177   45596 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238167.426685   45596 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238167.428018   45596 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpf29ehr55
+I0000 00:00:1783238167.429798   45596 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238167.430896   45596 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpf29ehr55
+I0000 00:00:1783238167.434695   45596 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+I0000 00:00:1783238167.435875   45596 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238167.455899   45596 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpf29ehr55
+I0000 00:00:1783238167.463152   45596 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 35153 microseconds.
+I0000 00:00:1783238167.472567   45596 dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+W0000 00:00:1783238173.267441   45596 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238173.268911   45596 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238173.270251   45596 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpyx8kd35h
+I0000 00:00:1783238173.271964   45596 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238173.272975   45596 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpyx8kd35h
+I0000 00:00:1783238173.278093   45596 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238173.300057   45596 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpyx8kd35h
+I0000 00:00:1783238173.310193   45596 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 39951 microseconds.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+W0000 00:00:1783238179.941750   45596 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238179.943072   45596 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238179.944280   45596 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpg8_sm3b0
+I0000 00:00:1783238179.946076   45596 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238179.947519   45596 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpg8_sm3b0
+I0000 00:00:1783238179.953171   45596 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238179.980526   45596 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpg8_sm3b0
+I0000 00:00:1783238179.989683   45596 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 45410 microseconds.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\activations\leaky_relu.py:41: UserWarning: Argument `alpha` is deprecated. Use `negative_slope` instead.
+  warnings.warn(
+W0000 00:00:1783238188.972084   45596 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238188.973656   45596 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238188.975201   45596 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpehx5hu56
+I0000 00:00:1783238188.977514   45596 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238188.978973   45596 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpehx5hu56
+I0000 00:00:1783238188.987051   45596 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238189.031505   45596 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpehx5hu56
+I0000 00:00:1783238189.043473   45596 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 68281 microseconds.
+W0000 00:00:1783238196.560358   45596 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238196.562007   45596 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238196.563572   45596 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmp0x7wwl0n
+I0000 00:00:1783238196.565941   45596 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238196.567512   45596 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmp0x7wwl0n
+I0000 00:00:1783238196.576540   45596 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238196.619221   45596 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmp0x7wwl0n
+I0000 00:00:1783238196.631815   45596 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 68252 microseconds.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\core\dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\activations\leaky_relu.py:41: UserWarning: Argument `alpha` is deprecated. Use `negative_slope` instead.
+  warnings.warn(
+W0000 00:00:1783238226.859908   45596 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238226.861034   45596 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238226.861539   45596 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpxl1dwhar
+I0000 00:00:1783238226.863958   45596 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238226.864714   45596 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpxl1dwhar
+I0000 00:00:1783238226.880765   45596 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238226.951354   45596 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpxl1dwhar
+I0000 00:00:1783238226.969275   45596 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 107745 microseconds.
+C:\Program Files\Python312\Lib\site-packages\keras\src\layers\activations\leaky_relu.py:41: UserWarning: Argument `alpha` is deprecated. Use `negative_slope` instead.
+  warnings.warn(
+W0000 00:00:1783238255.027067   45596 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1783238255.028646   45596 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+I0000 00:00:1783238255.030057   45596 reader.cc:83] Reading SavedModel from: C:\Users\l\AppData\Local\Temp\tmpnx6q53x0
+I0000 00:00:1783238255.032626   45596 reader.cc:52] Reading meta graph with tags { serve }
+I0000 00:00:1783238255.034051   45596 reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\l\AppData\Local\Temp\tmpnx6q53x0
+I0000 00:00:1783238255.048722   45596 loader.cc:236] Restoring SavedModel bundle.
+I0000 00:00:1783238255.120962   45596 loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\l\AppData\Local\Temp\tmpnx6q53x0
+I0000 00:00:1783238255.139681   45596 loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 109630 microseconds.
+E:\ST\QMSX\serial_tool\train_bp_variants_temp.py:477: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(names, rotation=30, ha='right', fontsize=8)
+E:\ST\QMSX\serial_tool\train_bp_variants_temp.py:488: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(names, rotation=30, ha='right', fontsize=8)
+E:\ST\QMSX\serial_tool\train_bp_variants_temp.py:577: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(names, rotation=30, ha='right', fontsize=8)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238258.887984   35220 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783238260.065179   35220 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "E:\ST\QMSX\serial_tool\train_labeled_filter_temp.py", line 428, in <module>
+    train_labeled_filter()
+  File "E:\ST\QMSX\serial_tool\train_labeled_filter_temp.py", line 138, in train_labeled_filter
+    choice = input("请输入 (1/2/3): ").strip()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line

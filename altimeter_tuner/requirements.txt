@@ -1,0 +1,4 @@
+numpy>=1.21
+matplotlib>=3.5
+# 可选：启用 NN 滤波（真实 TFLM 模型）时需要
+# tflite_runtime>=2.5

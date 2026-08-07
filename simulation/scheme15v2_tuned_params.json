@@ -1,0 +1,66 @@
+{
+  "base": {
+    "OPEN": 1.19,
+    "CLOSE": 0.84,
+    "WIN": 20,
+    "WARMUP": 64,
+    "FAST_WIN": 20,
+    "FAST_OPEN": 1000000000.0,
+    "FAST_CLOSE": 1000000000.0
+  },
+  "tuned": {
+    "OPEN": 1.19,
+    "CLOSE": 0.84,
+    "WIN": 20,
+    "WARMUP": 64,
+    "FAST_WIN": 5,
+    "FAST_OPEN": 0.5,
+    "FAST_CLOSE": 0.35
+  },
+  "real_demean": {
+    "base": 0.15622485062407582,
+    "tuned": 0.16181338212522275
+  },
+  "real_raw": {
+    "base": 0.3054184990000502,
+    "tuned": 0.37011750950842953
+  },
+  "synth": {
+    "base": [
+      {
+        "detected": true,
+        "final_err": 0.024943518690303257
+      },
+      {
+        "detected": true,
+        "final_err": 0.0315977083622877
+      },
+      {
+        "detected": false,
+        "final_err": 0.25
+      },
+      {
+        "detected": true,
+        "final_err": 0.03523509636242244
+      }
+    ],
+    "tuned": [
+      {
+        "detected": true,
+        "final_err": 0.009539065774460708
+      },
+      {
+        "detected": true,
+        "final_err": 0.01645205266448703
+      },
+      {
+        "detected": true,
+        "final_err": 0.03592263561256215
+      },
+      {
+        "detected": true,
+        "final_err": 0.02963712284766482
+      }
+    ]
+  }
+}

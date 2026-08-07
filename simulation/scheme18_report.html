@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>方案18 仿真与完全调优报告</title>
+<style>
+  body{font-family:"Microsoft YaHei","SimHei",sans-serif;margin:0;background:#f5f6f8;color:#222}
+  .wrap{max-width:1100px;margin:0 auto;padding:24px}
+  h1{color:#1a3c6e;border-bottom:3px solid #1a3c6e;padding-bottom:8px}
+  h2{color:#1a3c6e;margin-top:36px;border-left:5px solid #1a3c6e;padding-left:10px}
+  .card{background:#fff;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:18px;margin:16px 0}
+  .kpi{display:flex;gap:16px;flex-wrap:wrap}
+  .kpi .box{flex:1;min-width:200px;background:#eef3fb;border-radius:8px;padding:14px;text-align:center}
+  .kpi .big{font-size:30px;font-weight:700;color:#1a3c6e}
+  .kpi .lbl{font-size:13px;color:#555}
+  .good{color:#1a8a3a}.bad{color:#c0392b}
+  img{width:100%;border:1px solid #ddd;border-radius:6px;margin-top:10px}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th,td{border:1px solid #ccc;padding:7px 10px;text-align:center}
+  th{background:#1a3c6e;color:#fff}
+  tr:nth-child(even){background:#f2f5fa}
+  .note{background:#fff8e6;border-left:5px solid #e0a800;padding:12px 16px;border-radius:4px;margin:14px 0;font-size:14px}
+  code{background:#eef;padding:1px 5px;border-radius:3px}
+  .footer{color:#888;font-size:12px;margin-top:30px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>方案18 仿真与完全调优报告</h1>
+<p>仿真脚本：<code>simulation/sim_scheme18.py</code>　数据源：<code>serial_tool/data/raw</code>（静止/平移运动/升降运动 共 6 组真实采集）<br>
+算法链路：双传感器自适应 KF → 气压域加权融合 → ISA+温度补偿 → 高度域 EMA。NN 不参与数值融合（仅场景判别）。</p>
+
+<div class="card">
+  <h2 style="margin-top:0">核心结论</h2>
+  <div class="kpi">
+    <div class="box"><div class="big bad">72.3 m</div><div class="lbl">默认 P0=101325 的<br>系统偏移 RMSE</div></div>
+    <div class="box"><div class="big good">1.79 m</div><div class="lbl">调优后含偏移 RMSE<br>(P0≈100457 Pa)</div></div>
+    <div class="box"><div class="big">0.124→~0.10 m</div><div class="lbl">去均值动态 RMSE<br>(原本已很好)</div></div>
+    <div class="box"><div class="big">0.26 / 0.20 Pa</div><div class="lbl">KF 仿真 vs 固件记录<br>校验误差</div></div>
+  </div>
+  <div class="note">
+    <b>方案18 成败的关键在于 PRESET_P0_PA（代码预设海平面气压），而非滤波/融合参数。</b>
+    默认用国际标准 101325 Pa 会让绝对高度整体偏低约 72 m；仿真调优得到采集地实际海平面气压
+    <b>≈100457 Pa</b>，应用后绝对误差由 72 m 降到 ~1.8 m（该残差几乎全部来自 6 次采集间约 5.4 m 的真实海拔差，动态跟踪误差≈0）。
+  </div>
+</div>
+
+<h2>1. KF 实现校验（仿真 ≡ 固件）</h2>
+<div class="card">
+  <p>直接对 CSV 原始气压跑本仿真的自适应 KF，与固件记录时落盘的 <code>kf_pressure_pa</code> 对比：
+     MS5611 RMSE=0.261 Pa，BMP280 RMSE=0.199 Pa。说明仿真与固件算法逐帧一致，后续结果可信。</p>
+  <img src="sim_s18_validation.png" alt="KF校验">
+</div>
+
+<h2>2. 三场景波形（默认 vs 调优 vs 参考）</h2>
+<div class="card">
+  <p>每张图自上而下：原始气压+KF、融合气压、高度曲线、残差。高度曲线中“默认”已去除 72 m 偏移仅看形状，
+     可见其动态与参考几乎重合——再次印证问题只在 P0。</p>
+  <img src="sim_s18_静止.png" alt="静止">
+  <img src="sim_s18_平移.png" alt="平移运动">
+  <img src="sim_s18_升降.png" alt="升降运动">
+</div>
+
+<h2>3. 调优结果（P0 灵敏度 + 误差对比 + 参数表）</h2>
+<div class="card">
+  <img src="sim_s18_tuning.png" alt="调优结果">
+  <p style="font-size:13px;color:#555">
+    P0 灵敏度曲线在 P0≈100457 Pa 处取得最小 RMSE，与 101325 的标准值相差约 868 Pa（≈72 m 高度）。
+    动态跟踪误差（去偏移）与静止噪声在默认/最优/均衡三档间差异很小，说明默认参数已接近最优。</p>
+</div>
+
+<h2>4. 推荐参数</h2>
+<div class="card">
+  <table>
+    <tr><th>参数</th><th>默认（固件原值）</th><th>调优最优</th><th>调优均衡（保双传感器冗余）</th></tr>
+    <tr><td>PRESET_P0_PA (Pa)</td><td>101325.0</td><td>100457</td><td>100457</td></tr>
+    <tr><td>w_ms (MS5611 权重)</td><td>0.10</td><td>0.266</td><td>0.266</td></tr>
+    <tr><td>MS5611 KF Q</td><td>0.25901</td><td>0.436</td><td>0.436</td></tr>
+    <tr><td>MS5611 KF R</td><td>23.8569</td><td>21.47</td><td>21.47</td></tr>
+    <tr><td>BMP280 KF Q</td><td>0.08791</td><td>0.263</td><td>0.263</td></tr>
+    <tr><td>BMP280 KF R</td><td>2.82916</td><td>0.652</td><td>0.652</td></tr>
+    <tr><td>HEIGHT_EMA_ALPHA</td><td>0.94672</td><td>0.437</td><td>0.437</td></tr>
+    <tr><td>PRESSURE_EMA_ALPHA</td><td>0.60782</td><td>0.900</td><td>0.900</td></tr>
+    <tr><td><b>总RMSE(含偏移)</b></td><td><b>72.273 m</b></td><td><b>1.789 m</b></td><td><b>≈1.79 m</b></td></tr>
+    <tr><td>总RMSE(去均值)</td><td>0.124 m</td><td>~0.10 m</td><td>~0.10 m</td></tr>
+  </table>
+  <div class="note">
+    <b>已应用：</b>固件 <code>main.h</code> 的 <code>PRESET_P0_PA</code> 已改为 <b>100457.0f</b>（方案18 的专属参数，宏注释即要求填入当地实际海平面气压）。<br>
+    <b>未改动：</b>KF/EMA 的 <code>TUNED_*</code> 为方案 1–14 共享，本文未覆盖，以免破坏其它方案。如需把上表“调优最优”动态参数专属应用于方案18，
+    可在 <code>main.h</code> 增加 <code>#if FUSION_SCHEME==18</code> 覆盖块（权重/EMA 已可直接覆盖；KF 的 Q/R 因在校准段统一取 <code>TUNED_*</code>，需另加分支）。
+    考虑到默认动态参数去均值 RMSE 仅 0.124 m，建议保持现状、仅改 P0 即可。
+  </div>
+</div>
+
+<h2>5. 说明与局限</h2>
+<div class="card">
+  <ul>
+    <li><b>参考真值</b>：以各 CSV 的 <code>height_m</code>（设备上报海拔）作为参考。该值是另一算法输出而非独立真值，但 6 组数据自洽，足以支撑调优。</li>
+    <li><b>P0 的地点/时间依赖性</b>：100457 Pa 是本次采集地/时点的海平面气压。海平面气压随天气漂移（约 1 hPa ≈ 8.4 m），
+        换地点/换天应重新测量设定，或用串口 <code>SET_P0 &lt;pa&gt;</code> 在线设定。</li>
+    <li><b>残差来源</b>：调优后 1.79 m 的 RMSE 几乎全部是 6 次采集间约 5.4 m 的均值海拔差（不同房间/时点），属单 P0 无法消除的固有误差。</li>
+    <li><b>bmp_bias</b>：CSV 中 BMP280 气压已含校准偏置，仿真直接对两路 CSV 各跑 KF 再融合，精确复现固件融合结果。</li>
+  </ul>
+</div>
+
+<div class="footer">由 sim_scheme18.py 自动生成 · 图与参数详见 simulation/ 目录</div>
+</div>
+</body>
+</html>
